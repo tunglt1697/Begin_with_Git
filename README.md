@@ -103,3 +103,30 @@ git branch -d new_branch
 
 # Xóa nhánh 'new_branch' trên trình duyệt GitHub
 git push origin --delete new_branch
+
+
+
+# ==============================================================================
+# 💡 VÍ DỤ KỊCH BẢN THỰC TẾ DỄ HIỂU VỀ HOẠT ĐỘNG CỦA NHÁNH (BRANCH SCENARIO):
+# ==============================================================================
+#
+# 1. Đang ở nhánh main: File README.md chỉ có nội dung ban đầu.
+#
+# 2. Tạo & sang nhánh mới:
+#    git checkout -b new_branch
+#
+# 3. Thao tác sửa file:
+#    Mở file README.md, paste thêm đoạn hướng dẫn vào cuối file rồi bấm Ctrl + S để Save.
+#
+# 4. Lưu vết trên nhánh new_branch:
+#    git add .
+#    git commit -m "Bo sung huong dan branch"
+#
+# 👉 LÚC NÀY SỰ ẢO DIỆU CỦA GIT DIỄN RA:
+#    - Khi gõ: git checkout main
+#      ==> Mở file README.md ra sẽ TỰ ĐỘNG MẤT ĐI đoạn hướng dẫn bạn vừa paste.
+#
+#    - Khi gõ: git checkout new_branch
+#      ==> Mở file README.md ra đoạn hướng dẫn lại TỰ ĐỘNG XUẤT HIỆN trở lại!
+#
+# ==============================================================================
