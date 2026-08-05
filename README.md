@@ -51,3 +51,55 @@ git commit -m "Cap nhat noi dung moi"
 
 # Lệnh 3: Đẩy bản cập nhật mới nhất lên GitHub
 git push
+
+
+# ==============================================================================
+# HƯỚNG DẪN QUY TRÌNH LÀM VIỆC VỚI NHÁNH (BRANCH) TRONG GIT
+# Nhánh thử nghiệm trong hướng dẫn này có tên là: new_branch
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# BƯỚC 1: XEM VÀ TẠO NHÁNH MỚI
+# ------------------------------------------------------------------------------
+# Xem danh sách các nhánh hiện có trên máy (dấu * hiển thị nhánh đang đứng)
+git branch
+
+# Tạo nhánh mới tên là 'new_branch' và tự động chuyển sang nhánh đó luôn
+git checkout -b new_branch
+# (Lúc này ở cuối dòng lệnh Git Bash sẽ đổi từ (main) sang (new_branch))
+
+
+# ------------------------------------------------------------------------------
+# BƯỚC 2: VIẾT CODE VÀ ĐẨY NHÁNH MỚI LÊN GITHUB
+# ------------------------------------------------------------------------------
+# Sau khi sửa đổi/thêm code trên nhánh new_branch, thực hiện đóng gói và lưu mốc:
+git add .
+git commit -m "Code tinh nang moi tren new_branch"
+
+# Đẩy nhánh new_branch này lên kho lưu trữ trực tuyến GitHub lần đầu tiên
+git push -u origin new_branch
+
+
+# ------------------------------------------------------------------------------
+# BƯỚC 3: QUAY VỀ NHÁNH MAIN VÀ GỘP CODE (MERGE)
+# ------------------------------------------------------------------------------
+# Khi tính năng trên new_branch đã làm xong và kiểm tra không có lỗi:
+
+# 1. Chuyển quay trở lại nhánh chính (main)
+git checkout main
+
+# 2. Gộp toàn bộ code từ nhánh 'new_branch' vào nhánh 'main'
+git merge new_branch
+
+# 3. Đẩy nhánh main đã cập nhật code mới lên GitHub
+git push
+
+
+# ------------------------------------------------------------------------------
+# BƯỚC 4: DỌN DẸP NHÁNH SAU KHÍ ĐÃ GỘP (Tùy chọn)
+# ------------------------------------------------------------------------------
+# Xóa nhánh 'new_branch' dưới máy tính cho gọn repo
+git branch -d new_branch
+
+# Xóa nhánh 'new_branch' trên trình duyệt GitHub
+git push origin --delete new_branch
