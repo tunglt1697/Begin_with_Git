@@ -3,6 +3,14 @@
 # HƯỚNG DẪN SỬ DỤNG GIT & GITHUB CHI TIẾT
 # Bạn có thể chạy các lệnh này trực tiếp trong Git Bash
 # ==============================================================================
+# Chuẩn bị:
+# 1.Tạo thư mục trên máy tính
+# 2.Vào trình duyệt Git Bash thực hiện truy cập thư mục làm việc bằng "cd"
+ADMIN@DESKTOP-9L7VPFB MINGW64 ~
+$ cd ~/Downloads/linux_learning/Git
+# 3.Tạo file README
+ADMIN@DESKTOP-9L7VPFB MINGW64 ~/Downloads/linux_learning/Git
+$ echo "# Xin chao GitHub" > README.md
 
 # ------------------------------------------------------------------------------
 # BƯỚC 1: KHAI BÁO THÔNG TIN CÁ NHÂN (Chỉ cần làm 1 lần duy nhất khi cài Git)
